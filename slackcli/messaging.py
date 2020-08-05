@@ -28,8 +28,8 @@ def iter_resources():
     # https://api.slack.com/methods/conversations.list
     # https://github.com/os/slacker/issues/116
     fetchers = [
-        ("channel", lambda: slack.client().channels.list().body["channels"]),
-        ("group", lambda: slack.client().groups.list().body["groups"]),
+        ("channel", lambda: slack.client().conversations.list().body["channels"]),
+        #("group", lambda: slack.client().groups.list().body["groups"]),
         ("user", lambda: slack.client().users.list().body["members"]),
     ]
     for resource_type, fetcher in fetchers:
