@@ -21,7 +21,7 @@ setup(
     install_requires=[
         "argcomplete",
         "appdirs<1.5",
-        "slacker<0.12.0",
+        "slacker<0.14.0",
         "websocket-client<0.55.0",
     ],
     extras_require={"development": ["black", "pylint"]},
